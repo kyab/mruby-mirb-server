@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EB559B9819E18F6300A6F777 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EB559B9719E18F6300A6F777 /* main.c */; };
+		EB559B9F19E1903D00A6F777 /* libmruby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB559B9E19E1903D00A6F777 /* libmruby.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		EB559B9419E18F6300A6F777 /* mruby-mirb-server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "mruby-mirb-server"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB559B9719E18F6300A6F777 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		EB559B9E19E1903D00A6F777 /* libmruby.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmruby.a; path = ../mruby/build/host/lib/libmruby.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB559B9F19E1903D00A6F777 /* libmruby.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +44,7 @@
 		EB559B8B19E18F6300A6F777 = {
 			isa = PBXGroup;
 			children = (
+				EB559B9E19E1903D00A6F777 /* libmruby.a */,
 				EB559B9619E18F6300A6F777 /* mruby-mirb-server */,
 				EB559B9519E18F6300A6F777 /* Products */,
 			);
@@ -202,6 +206,12 @@
 		EB559B9C19E18F6300A6F777 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/Users/koji/work/mruby/mruby/include,
+				);
+				LIBRARY_SEARCH_PATHS = /Users/koji/work/mruby/mruby/build/host/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +219,12 @@
 		EB559B9D19E18F6300A6F777 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/Users/koji/work/mruby/mruby/include,
+				);
+				LIBRARY_SEARCH_PATHS = /Users/koji/work/mruby/mruby/build/host/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
