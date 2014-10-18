@@ -3,6 +3,28 @@
 //  mirb_tcpserver
 //
 
+/*
+ 
+ size:16bit signed integer as network byte order.
+ 
+ MIRB:init :size=0
+ MIRB:INIT :size=0:success, 1 error and reason.
+ 
+ MIRB:code :size:strings
+ 
+ MIRB:RETN :size:string => final result
+ MIRB:EXPTpa :size:string => uncathed exception.
+ MIRB:EXCE :size:string => EXECUTION ERROR. compile failed or other.
+ MIRB:OUTP :size:string => output
+ 
+ MIRB:comp :size:
+ MIRB:COMP :size:
+ 
+ MIRB:PERR :size:string ... protocol error. possibly always
+ 
+ 
+ */
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
